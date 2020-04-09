@@ -14,4 +14,4 @@ const App = (props) => {
     );
 }
 
-export default withStoreService(App);
+export default withStoreService()(App);

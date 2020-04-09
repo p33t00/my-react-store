@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { compose } from '../../utils';
 import BookListItem from '../book-list-item';
+import withStoreService from '../hoc';
+import { booksLoaded } from '../../actions';
 
-export default class BookList extends Component {
+class BookList extends Component {
+    componentDidMount = () => {
+        const books = this.props.storeService.getBooks();
+        this.props.booksLoaded(books);
+    }
+
     render() {
+        console.log(this.props);
         return (
             <ul>
                 {
@@ -14,3 +24,9 @@ export default class BookList extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({books: state.books});
+// getting only one action. connect() can handle this syntax
+const mapDispatchToProps = { booksLoaded };
+
+export default compose(withStoreService(), connect(mapStateToProps, mapDispatchToProps))(BookList);
