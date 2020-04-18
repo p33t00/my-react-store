@@ -1,0 +1,32 @@
+.block-list-item {
+    background-color: rgba(0,0, 0, 0.3);
+    display: flex;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.block-list-item h3 {
+    color: lightseagreen;
+}
+
+.block-list-item span {
+    color: rgb(212, 212, 212);
+}
+
+.block-list-item .item-info {
+    padding-left: 50px;
+}
+
+.block-list-item .buy-info {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.list-item-price {
+    color: #fff;
+	font-size: 3rem;
+    font-weight: 700;
+}

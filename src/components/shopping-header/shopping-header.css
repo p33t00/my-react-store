@@ -1,0 +1,23 @@
+.shopping-header {
+	border-bottom: 1px solid gray;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 2rem;
+	background-color: black;
+	color: white;
+}
+
+.logo::before {
+    content: "Re";
+	background-color: white;
+	color: black;
+}
+
+.shopping-header .purchase-info span{
+    margin: 0 15px;
+}

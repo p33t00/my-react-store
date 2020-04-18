@@ -1,0 +1,16 @@
+.app {
+	padding: 0 50px;
+	height: 100vh;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 1) 39%,
+		rgba(25, 140, 134, 1) 87%,
+		rgba(32, 178, 170, 1) 100%
+	);
+}
+
+a {
+	text-decoration: none !important;
+}

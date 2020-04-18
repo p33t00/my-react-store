@@ -1,0 +1,17 @@
+table {
+    margin-top: 30px;
+    border-color: gray;
+    color: white;
+}
+
+table button {
+    margin-right: 5px;
+}
+
+
+table button:last-of-type {
+    margin-right: 0px;
+}
+table > thead {
+    color: rgb(25, 140, 134);
+}
