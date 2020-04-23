@@ -23,9 +23,10 @@ export default class BookstoreService {
 	];
 
 	getBooks() {
-		return new Promise((resolve) => {
+		return new Promise((resolve, reject) => {
 			this.timerID = setTimeout(() => {
 				resolve(this.data);
+				// reject(new Error('some nasty error'));
 			}, 1200);
 		});
 	}
