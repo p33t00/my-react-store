@@ -6,7 +6,7 @@ import { compose } from "../../utils";
 import { fetchBooks } from "../../actions";
 import Spinner from "../spinner";
 
-class BookListTable extends React.Component {
+class BookListContainerTable extends React.Component {
 	componentDidMount = () => {
 		this.props.fetchBooks();
 	};
@@ -72,4 +72,4 @@ const mapDispatchToProps = (dispatch, { storeService }) => {
 export default compose(
 	withStoreService(),
 	connect(mapStateToProps, mapDispatchToProps)
-)(BookListTable);
+)(BookListContainerTable);

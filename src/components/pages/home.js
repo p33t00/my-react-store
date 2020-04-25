@@ -1,10 +1,10 @@
 import React from 'react';
-import BookList from '../book-list';
+import BookListContainer from '../book-list';
 
 const Home = (props) => {
     return (
         <div>
-			<BookList />
+			<BookListContainer />
 		</div>);
 }
 

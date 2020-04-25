@@ -1,8 +1,8 @@
 import React from "react";
-import BookListTable from '../book-list-table';
+import BookListContainerTable from '../book-list-table';
 
 const Cart = () => {
-	return <BookListTable/>
+	return <BookListContainerTable/>
 };
 
 export default Cart;

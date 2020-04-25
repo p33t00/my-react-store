@@ -5,12 +5,14 @@ export default class ErrorBoundry extends Component {
     state = {
         hasError: false
     }
+
+// TODO: check if error stack is not displayed on production.
     componentDidCatch(error, info) {
-        console.log('yoooooooolll.... erorrrororo');
         this.setState({hasError: true});
     }
 
     render() {
+        console.log(this.state.hasError);
         if (this.state.hasError) return <ErrorIndicator />
         return this.props.children;
     }

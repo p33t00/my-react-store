@@ -1,7 +1,7 @@
 import React from "react";
 import "./book-list-item.css";
 
-const BookListItem = ({ book }) => {
+const BookListContainerItem = ({ book }) => {
 	const { title, author, price, coverImage } = book;
 	return (
 		<div className="block-list-item">
@@ -20,4 +20,4 @@ const BookListItem = ({ book }) => {
 	);
 };
 
-export default BookListItem;
+export default BookListContainerItem;

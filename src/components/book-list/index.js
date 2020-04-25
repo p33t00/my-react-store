@@ -1,2 +1,2 @@
-import BookList from './book-list';
-export default BookList;
+import BookListContainer from './book-list';
+export default BookListContainer;

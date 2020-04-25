@@ -1,2 +1,2 @@
-import BookListTable from './book-list-table';
-export default BookListTable;
+import BookListContainerTable from './book-list-table';
+export default BookListContainerTable;
