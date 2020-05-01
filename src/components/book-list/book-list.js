@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { compose } from "../../utils";
 import BookListContainerItem from "../book-list-item";
 import withStoreService from "../hoc";
-import { fetchBooks } from "../../actions";
+import { fetchBooks, onAddBook } from "../../actions";
 import Spinner from "../spinner";
 import "./book-list.css";
 import ErrorIndicator from "../error-indicator";
@@ -18,7 +18,7 @@ class BookListContainer extends Component {
 		if (this.props.error) return <ErrorIndicator />;
 
 		console.log(this.props);
-		return <BookList books={this.props.books} />;
+		return <BookList books={this.props.books} onAddBook={this.props.onAddBook} />;
 	}
 }
 
@@ -29,7 +29,7 @@ const BookList = (props) => {
 				{props.books.map((b) => {
 					return (
 						<li key={b.id}>
-							<BookListContainerItem book={b} />
+							<BookListContainerItem book={b} onAddBook={() => props.onAddBook(b.id)} />
 						</li>
 					);
 				})}
@@ -47,7 +47,10 @@ const mapStateToProps = (state) => ({
 // const mapDispatchToProps = { booksLoaded, booksRequested, booksError };
 const mapDispatchToProps = (dispatch, { storeService }) => {
 	// storeService is taken from ownProps
-	return { fetchBooks: fetchBooks(dispatch, storeService) };
+	return { 
+		fetchBooks: fetchBooks(dispatch, storeService),
+		onAddBook: (id) => dispatch(onAddBook(id))
+	};
 };
 
 export default compose(
